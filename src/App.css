@@ -1,0 +1,148 @@
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.My.todo {
+    background-color: gray;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.Tasks {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 1px darkgray;
+  margin: 0;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item input {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+
+.add-task button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: darkblue;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+.main-nav {
+  background-color: darkblue;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 3px solid gold;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 20px;
+  border: 2px solid gold;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: blue;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: gold;
+  color: darkblue;
+  border-color: white;
+}
+
+.nav-link.active {
+  background-color: gold;
+  color: darkblue;
+}
+
+.about-content {
+  padding: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content h2, .about-content h3 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.about-content ul {
+  margin-left: 20px;
+}
+
+.about-content button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.credit {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: lightblue;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.credit h3 {
+  color: darkblue;
+  margin-bottom: 10px;
+}
