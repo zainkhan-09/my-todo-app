@@ -2,6 +2,7 @@ import './App.css';
 import { useTheme } from './ThemeContext';
 import { Link } from 'react-router-dom';
 import { keyboardShortcuts } from './useKeyboardShortcuts';
+import { themes } from './themes';
 
 function About() {
   const { isDark } = useTheme();
@@ -120,34 +121,34 @@ function About() {
           <p>Choose from 6 beautiful color themes:</p>
           <div className="themes-grid">
             <div className="theme-preview ocean">
-              <div className="theme-color-circle" style={{ background: '#3498db' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.ocean.colors.primary }}></div>
               <span>Ocean</span>
-              <small>#3498db</small>
+              <small>{themes.ocean.colors.primary}</small>
             </div>
             <div className="theme-preview forest">
-              <div className="theme-color-circle" style={{ background: '#27ae60' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.forest.colors.primary }}></div>
               <span>Forest</span>
-              <small>#27ae60</small>
+              <small>{themes.forest.colors.primary}</small>
             </div>
             <div className="theme-preview sunset">
-              <div className="theme-color-circle" style={{ background: '#e74c3c' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.sunset.colors.primary }}></div>
               <span>Sunset</span>
-              <small>#e74c3c</small>
+              <small>{themes.sunset.colors.primary}</small>
             </div>
             <div className="theme-preview midnight">
-              <div className="theme-color-circle" style={{ background: '#2c3e50' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.midnight.colors.primary }}></div>
               <span>Midnight</span>
-              <small>#2c3e50</small>
+              <small>{themes.midnight.colors.primary}</small>
             </div>
             <div className="theme-preview rose">
-              <div className="theme-color-circle" style={{ background: '#e91e63' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.rose.colors.primary }}></div>
               <span>Rose</span>
-              <small>#e91e63</small>
+              <small>{themes.rose.colors.primary}</small>
             </div>
             <div className="theme-preview lime">
-              <div className="theme-color-circle" style={{ background: '#7cb342' }}></div>
+              <div className="theme-color-circle" style={{ background: themes.lime.colors.primary }}></div>
               <span>Lime</span>
-              <small>#7cb342</small>
+              <small>{themes.lime.colors.primary}</small>
             </div>
           </div>
         </section>
