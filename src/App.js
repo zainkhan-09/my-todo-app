@@ -932,15 +932,39 @@ function getAnalyticsData(lists) {
 }
 
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    // Show welcome for 2.5 seconds every time app loads
+    const welcomeTimer = setTimeout(() => {
+      setShowWelcome(false);
+      setShowContent(true);
+    }, 2500);
+
+    return () => clearTimeout(welcomeTimer);
+  }, []);
+
   return (
     <ThemeProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<TodoApp />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/analytics" element={<Analytics />} />
-        </Routes>
-      </Router>
+      {showWelcome && (
+        <div className="welcome-overlay-app">
+          <div className="welcome-message-app">
+            <h1 className="welcome-title-app">Welcome</h1>
+            <p className="welcome-subtitle-app">To My Todo App</p>
+          </div>
+        </div>
+      )}
+      
+      <div className={`app-content-wrapper ${showContent ? 'fade-in-app' : 'fade-out-app'}`}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<TodoApp />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/analytics" element={<Analytics />} />
+          </Routes>
+        </Router>
+      </div>
     </ThemeProvider>
   );
 }
